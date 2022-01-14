@@ -1,0 +1,353 @@
+/* login box styles */
+.login {
+  max-width: 350px;
+  min-width: 250px;
+  border-radius: 2px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login {
+  img {
+    width: 150px;
+  }
+}
+
+.login {
+  .logo-image,
+  h1 {
+    text-align: center;
+  }
+}
+
+.title {
+  font-size: 1.6rem;
+  line-height: 2.5;
+}
+
+.icon {
+  position: relative;
+  margin-top: 15px;
+}
+
+.icon i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  padding: 7px 10px;
+}
+
+input {
+  width: 80%;
+  border-color: whitesmoke;
+  outline: 0;
+  border-width: 0 0 2px;
+  margin-left: 35px;
+  padding: 12px;
+}
+
+input {
+  &.is-valid {
+    border: 2px solid green;
+  }
+  &.is-invalid {
+    border: 2px solid red;
+  }
+}
+
+.messages {
+  margin: 15px;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  &.active {
+    opacity: 1;
+  }
+}
+
+remember-me {
+  margin-top: 50px;
+}
+
+#wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-submit {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #1181cb;
+  color: #1181cb;
+  letter-spacing: 1px;
+  font: {
+    weight: bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color: white;
+    background: #1181cb;
+  }
+  &:active {
+    letter-spacing: 2px;
+  }
+  &:after {
+    content: "Sign in";
+  }
+}
+
+/* login box animation from Animate.css https://animate.style/ */
+.login {
+  -webkit-animation: cardEnter 0.75s ease-in-out 0.5s;
+  animation: cardEnter 0.75s ease-in-out 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@-webkit-keyframes cardEnter {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    -ms-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    -ms-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    -ms-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    -ms-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    -ms-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes cardEnter {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    -ms-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    -ms-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    -ms-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    -ms-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    -ms-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* remember me switch */
+.gui-switch > input:not(:disabled):hover::before {
+  --highlight-size: 0.5rem;
+}
+
+.gui-switch {
+  --thumb-size: 2rem;
+  --thumb: hsl(0 0% 100%);
+  --thumb-highlight: hsl(0 0% 0% / 25%);
+
+  --track-size: calc(var(--thumb-size) * 2);
+  --track-padding: 2px;
+  --track-inactive: hsl(80 0% 80%);
+  --track-active: hsl(80 60% 45%);
+
+  --thumb-color: var(--thumb);
+  --thumb-color-highlight: var(--thumb-highlight);
+  --track-color-inactive: var(--track-inactive);
+  --track-color-active: var(--track-active);
+
+  --isLTR: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 2ch;
+  justify-content: space-between;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (prefers-color-scheme: dark) {
+    & {
+      --thumb: hsl(0 0% 5%);
+      --thumb-highlight: hsl(0 0% 100% / 25%);
+      --track-inactive: hsl(80 0% 35%);
+      --track-active: hsl(80 60% 60%);
+    }
+  }
+
+  &:dir(rtl) {
+    --isLTR: -1;
+  }
+
+  &.-vertical {
+    min-block-size: calc(var(--track-size) + calc(var(--track-padding) * 2));
+
+    & > input {
+      transform: rotate(calc(90deg * var(--isLTR) * -1));
+      touch-action: pan-x;
+    }
+  }
+
+  & > input {
+    --thumb-position: 0%;
+    --thumb-transition-duration: 0.25s;
+
+    padding: var(--track-padding);
+    background: var(--track-color-inactive);
+    inline-size: var(--track-size);
+    block-size: var(--thumb-size);
+    border-radius: var(--track-size);
+
+    appearance: none;
+    pointer-events: none;
+    touch-action: pan-y;
+    border: none;
+    outline-offset: 5px;
+    box-sizing: content-box;
+
+    flex-shrink: 0;
+    display: grid;
+    align-items: center;
+    grid: [track] 1fr / [track] 1fr;
+
+    transition: background-color 0.25s ease;
+
+    &::before {
+      --highlight-size: 0;
+
+      content: "";
+      cursor: pointer;
+      pointer-events: auto;
+      grid-area: track;
+      inline-size: var(--thumb-size);
+      block-size: var(--thumb-size);
+      background: var(--thumb-color);
+      box-shadow: 0 0 0 var(--highlight-size) var(--thumb-color-highlight);
+      border-radius: 50%;
+      transform: translateX(var(--thumb-position));
+
+      @media (--motionOK) {
+        & {
+          transition: transform var(--thumb-transition-duration) ease,
+            box-shadow 0.25s ease;
+        }
+      }
+    }
+
+    &:not(:disabled):hover::before {
+      --highlight-size: 0.5rem;
+    }
+
+    &:checked {
+      background: var(--track-color-active);
+      --thumb-position: calc((var(--track-size) - 100%) * var(--isLTR));
+    }
+
+    &:indeterminate {
+      --thumb-position: calc(
+        calc(calc(var(--track-size) / 2) - calc(var(--thumb-size) / 2)) *
+          var(--isLTR)
+      );
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      --thumb-color: transparent;
+
+      &::before {
+        cursor: not-allowed;
+        box-shadow: inset 0 0 0 2px hsl(0 0% 100% / 50%);
+
+        @media (prefers-color-scheme: dark) {
+          & {
+            box-shadow: inset 0 0 0 2px hsl(0 0% 0% / 50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* responsive with Breakpoints 960px */
+@media (min-width: 960px) {
+  .signin-logo {
+    max-width: 500px;
+    border-radius: 2px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  .logo-image {
+    img {
+      width: 200px;
+    }
+  }
+}

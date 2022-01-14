@@ -1,1 +1,75 @@
-<p>login-form works!</p>
+<div class="login">
+  <div class="logo-image">
+    <img src="../../../assets/images/logo.jpg" alt="logo" />
+  </div>
+  <h1 class="title">Technical test</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)" method="post">
+    <div class="icon">
+      <span><i class="fa fa-envelope-o fa-fw"></i></span>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="example@mail.com"
+        required
+        [class.is-valid]="isEmailFieldValid"
+        [class.is-invalid]="isEmailFieldInvalid"
+      />
+      <div
+        class="messages"
+        [class.active]="emailField.touched && emailField.invalid"
+      >
+        <p>
+          <strong *ngIf="emailField.touched && emailField.hasError('required')"
+            >This field is required</strong
+          >
+        </p>
+        <p>
+          <strong *ngIf="!emailField.valid">Email address is invalid</strong>
+        </p>
+      </div>
+    </div>
+    <div class="icon">
+      <span><i class="fa fa-key fa-fw"></i></span>
+
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Must be at least 5 characters"
+        required
+        [class.is-valid]="isPasswordFieldValid"
+        [class.is-invalid]="isPasswordFieldInvalid"
+      />
+      <div
+        class="messages"
+        [class.active]="passwordField.touched && passwordField.invalid"
+      >
+        <p>
+          <strong
+            *ngIf="passwordField.touched && passwordField.hasError('required')"
+            >This field is required</strong
+          >
+        </p>
+        <p>
+          <strong
+            *ngIf="passwordField.touched && passwordField.hasError('minlength')"
+            >The password must be at least 6 characters long</strong
+          >
+        </p>
+      </div>
+    </div>
+    <div class="remember-me">
+      <label for="switch-1" class="gui-switch">
+        Remember me
+        <input
+          type="checkbox"
+          role="switch"
+          id="switch-1"
+          formControlName="remember"
+        />
+      </label>
+    </div>
+    <div id="wrapper" class="icon">
+      <button class="button-submit" type="submit"></button>
+    </div>
+  </form>
+</div>

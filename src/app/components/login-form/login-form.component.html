@@ -10,6 +10,7 @@
         type="email"
         formControlName="email"
         placeholder="example@mail.com"
+        class="inputs"
         required
         [class.is-valid]="isEmailFieldValid"
         [class.is-invalid]="isEmailFieldInvalid"
@@ -24,17 +25,19 @@
           >
         </p>
         <p>
-          <strong *ngIf="!emailField.valid">Email address is invalid</strong>
+          <strong *ngIf="emailField.touched && emailField.hasError('pattern')"
+            >'{{ emailField.value }}' is not a valid email address</strong
+          >
         </p>
       </div>
     </div>
     <div class="icon">
       <span><i class="fa fa-key fa-fw"></i></span>
-
       <input
         type="password"
         formControlName="password"
         placeholder="Must be at least 5 characters"
+        class="inputs"
         required
         [class.is-valid]="isPasswordFieldValid"
         [class.is-invalid]="isPasswordFieldInvalid"
@@ -58,12 +61,13 @@
       </div>
     </div>
     <div class="remember-me">
-      <label for="switch-1" class="gui-switch">
+      <label for="rememberCheck" class="toggle-switch">
         Remember me
         <input
+          id="rememberCheck"
           type="checkbox"
+          class="inputs"
           role="switch"
-          id="switch-1"
           formControlName="remember"
         />
       </label>

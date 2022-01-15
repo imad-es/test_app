@@ -9,29 +9,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginFormComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.buildForm();
-  }
-  ngOnInit(): void {}
+  constructor(private formBuilder: FormBuilder) {}
 
-  private buildForm() {
-    this.loginForm = this.formBuilder.group({
-      email: [
-        '',
-        [
-          Validators.required,
-          Validators.email,
-          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
-        ],
-      ],
-      password: ['', [Validators.required, Validators.minLength(5)]],
-      remember: [''],
-    });
+  ngOnInit() {
+    this.buildForm();
   }
 
   onSubmit(event: Event) {
     if (this.loginForm.valid) {
       console.table('Welcome', this.emailField.value);
+      console.table(this.loginForm.value);
       this.loginForm.reset();
     } else {
       this.loginForm.markAllAsTouched();
@@ -63,5 +50,20 @@ export class LoginFormComponent implements OnInit {
   }
   get isPasswordFieldInvalid() {
     return this.passwordField.touched && this.passwordField.invalid;
+  }
+
+  private buildForm() {
+    this.loginForm = this.formBuilder.group({
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.email,
+          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+        ],
+      ],
+      password: ['', [Validators.required, Validators.minLength(5)]],
+      remember: [''],
+    });
   }
 }
